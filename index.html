@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Train-Time</title>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        Train Time
+    </header>
+
+    <div class="container wrapper">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                </tr>
+            </thead>
+            <tbody id="table-values">
+
+
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                Add Train
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="train-name">Train Name</label>
+                    <input type="text" class="form-control" id="train-name" aria-describedby="emailHelp" placeholder="New Train">
+                </div>
+                <div class="form-group">
+                    <label for="train-destination">Desination</label>
+                    <input type="text" class="form-control" id="train-destination" aria-describedby="emailHelp"
+                        placeholder="Mars">
+                </div>
+                <div class="form-group">
+                    <label for="first-time">First Train Time (HH:mm - military time)</label>
+                    <input type="text" class="form-control" id="first-time" aria-describedby="emailHelp" placeholder="00:00">
+                </div>
+                <!-- <div class="form-group">
+                <label for="date-input"></label>Date (MM/DD/YYYY)</label>
+                <input class="form-control" type="date" value="2011-08-19" id="date-input">
+            </div> -->
+                <div class="form-group">
+                    <label for="train-frequency">Train Frequency</label>
+                    <input type="number" class="form-control" id="train-frequency" aria-describedby="emailHelp"
+                        placeholder="">
+                </div>
+                <button id="submit-button" type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/javascript/app.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>
