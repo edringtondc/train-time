@@ -21,13 +21,16 @@
 
 <body>
 
-    <header>
-        Train Time
-    </header>
+    <div class="jumbotron jumbotron-fluid title justify-content-center txt-info">
+        <div class="container">
+          <h1 class="display-4">Train Time!</h1>
+          <p class="lead">Train scheduler</p>
+        </div>
+      </div>
 
     <div class="container wrapper">
         <table class="table">
-            <thead>
+            <thead class="table-head bg-info">
                 <tr>
                     <th scope="col">Train Name</th>
                     <th scope="col">Destination</th>
@@ -46,10 +49,10 @@
 
     <div class="container">
         <div class="card">
-            <div class="card-header">
+            <div class="card-header bg-info">
                 Add Train
             </div>
-            <form>
+            <form class="m-1">
                 <div class="form-group">
                     <label for="train-name">Train Name</label>
                     <input type="text" class="form-control" id="train-name" aria-describedby="emailHelp" placeholder="New Train">
@@ -72,7 +75,7 @@
                     <input type="number" class="form-control" id="train-frequency" aria-describedby="emailHelp"
                         placeholder="">
                 </div>
-                <button id="submit-button" type="submit" class="btn btn-primary">Submit</button>
+                <button id="submit-button" type="submit" class="btn btn-info">Submit</button>
             </form>
         </div>
     </div>
