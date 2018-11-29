@@ -36,12 +36,27 @@ $("#submit-button").on("click", function (event) {
 
 dataRef.ref().on("child_added", function (childSnapshot) {
     console.log("clicks: " + childSnapshot.val().clicks)
-    console.log("clicks: " + childSnapshot.val().train)
-    console.log("clicks: " + childSnapshot.val().start)
-    console.log("clicks: " + childSnapshot.val().where)
-    console.log("clicks: " + childSnapshot.val().often)
+    console.log("train: " + childSnapshot.val().train)
+    console.log("start: " + childSnapshot.val().start)
+    console.log("where: " + childSnapshot.val().where)
+    console.log("often: " + childSnapshot.val().often)
 
-    $("#table-values").append("<tr><td>" + childSnapshot.val().train + "<td>" + childSnapshot.val().where + "<td>" + childSnapshot.val().often + "<td>" + "TBD" + "<td>" + "TBD");
+    var startConverted = moment(childSnapshot.val().start, "HH:mm").subtract(1, "days");
+
+
+    var diffTime = moment().diff(moment(startConverted), "minutes");
+    var tFrequency = childSnapshot.val().often;
+    var tRemainder = diffTime % tFrequency;
+    var minsAway = tFrequency - tRemainder;
+
+
+    console.log("diffTime: " + diffTime)
+
+
+    var nextArrival = moment().add(minsAway, "minutes").format("hh:mm");
+
+
+    $("#table-values").append("<tr><td>" + childSnapshot.val().train + "<td>" + childSnapshot.val().where + "<td>" + childSnapshot.val().often + "<td>" + nextArrival + "<td>" + minsAway);
 
 });
 

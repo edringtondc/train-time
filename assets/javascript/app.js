@@ -77,28 +77,28 @@ console.log("data from firebase " + childSnapshot.val().trainOBJ.trainName)
     console.log("Errors Handled: " + errorObject.code);
 });
 
-// function renderRow(childSnapshot) {
+function renderRow(childSnapshot) {
 
 
-//     trainName = childSnapshot.val().newTrain.trainName;
-//     console.log(trainName);
-//     // destination = childSnapshot.val().destination 
-//     // tFrequency = childSnapshot.val().frequency;
+    trainName = childSnapshot.val().newTrain.trainName;
+    console.log(trainName);
+    destination = childSnapshot.val().destination 
+    tFrequency = childSnapshot.val().frequency;
 
 
 
-//     // diffTime = moment().diff(moment(childSnapshot.val().firstTime), "minutes");
+    diffTime = moment().diff(moment(childSnapshot.val().firstTime), "minutes");
 
-//     // // Time apart (remainder)
-//     // tRemainder = diffTime % childSnapshot.val().frequency;
+    // Time apart (remainder)
+    tRemainder = diffTime % childSnapshot.val().frequency;
 
-//     // // Minute Until Train
-//     // tMinutesTillTrain = tFrequency - tRemainder;
+    // Minute Until Train
+    tMinutesTillTrain = tFrequency - tRemainder;
 
-//     // // Next Train
-//     // nextTrain = moment().add(tMinutesTillTrain, "minutes").format("hh:mm");
+    // Next Train
+    nextTrain = moment().add(tMinutesTillTrain, "minutes").format("hh:mm");
 
-//     // $("#table-values").append("<tr><td>" + trainName + "<td>" + destination + "<td>" + tFrequency + "<td>" + nextTrain + "<td>" + tMinutesTillTrain);
+    $("#table-values").append("<tr><td>" + trainName + "<td>" + destination + "<td>" + tFrequency + "<td>" + nextTrain + "<td>" + tMinutesTillTrain);
 
 
 
