@@ -1,11 +1,13 @@
-body {
-background-color: gray;
-}
 
-.title, h1, p {
-    text-align: center;
-}
 
-#table-head {
-    background-color: hotpink;
+
+#train-icon {
+    position: absolute;
+
+ 
+
+}
+.row-header {
+    position: relative;
+    height: 50px;
 }

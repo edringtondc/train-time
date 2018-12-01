@@ -12,24 +12,34 @@
 
     <!-- Bootstrap CDN-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css"/>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
+    
     <!-- Firebase Reference -->
     <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.css" />
 
 </head>
 
 <body>
 
-    <div class="jumbotron jumbotron-fluid title justify-content-center txt-info">
-        <div class="container">
-          <h1 class="display-4">Train Time!</h1>
-          <p class="lead">Train scheduler</p>
-        </div>
-      </div>
+  <!-- Image and text -->
+
+<nav class="navbar navbar-light bg-info mb-5 ">
+    <a class="navbar-brand" href="#">
+      <img src="assets/images/train1.jpg" width="30" height="30"  class="d-inline-block align-top" alt="">
+      Train Time!
+    </a>
+  </nav>
+
+  <!-- <img src="assets/images/circusTrain.png" alt="train flying across screen" id="train-animation" /> -->
+
+
 
     <div class="container wrapper">
-        <table class="table">
+        <table class="table border border-info">
             <thead class="table-head bg-info">
                 <tr>
                     <th scope="col">Train Name</th>
@@ -48,9 +58,10 @@
     </div>
 
     <div class="container">
-        <div class="card">
-            <div class="card-header bg-info">
-                Add Train
+        <div class="card border border-info">
+            <div class="card-header bg-info d-flex flex-row row-header">
+                    <img src="assets/images/toytrain.png" width="35" height="35" id="train-icon" class="run-animation d-inline-block align-top" alt="">
+
             </div>
             <form class="m-1">
                 <div class="form-group">
@@ -58,7 +69,7 @@
                     <input type="text" class="form-control" id="train-name" aria-describedby="emailHelp" placeholder="New Train">
                 </div>
                 <div class="form-group">
-                    <label for="train-destination">Desination</label>
+                    <label for="train-destination">Destination</label>
                     <input type="text" class="form-control" id="train-destination" aria-describedby="emailHelp"
                         placeholder="Mars">
                 </div>
@@ -79,6 +90,9 @@
             </form>
         </div>
     </div>
+    <audio id="mysoundclip" preload="auto">
+            <source src="assets/images/steam-train-whistle-daniel_simon.mp3"> </source>
+            </audio>
 
     <script src="assets/javascript/app2.js"></script>
 
